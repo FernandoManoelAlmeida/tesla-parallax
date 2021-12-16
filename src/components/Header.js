@@ -5,9 +5,11 @@ import TeslaLogo from "../assets/teslaLogoSmall.svg"
 function Header({ items }) {
   return (
     <div className="header">
-      <div className="header__logo">
-        <img src={TeslaLogo} alt="" />
-      </div>
+      <a href="/">
+        <div className="header__logo">
+          <img src={TeslaLogo} alt="" />
+        </div>
+      </a>
 
       <div className="header__center">
         {items.map((item) => (
