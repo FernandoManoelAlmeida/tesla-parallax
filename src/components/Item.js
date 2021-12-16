@@ -5,6 +5,7 @@ import './Item.css';
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 
 function Item({
+  id,
   title,
   desc,
   desclick,
@@ -17,7 +18,7 @@ function Item({
   first
 }) {
   return (
-    <div className="item" style={{
+    <div id={id} className="item" style={{
       backgroundImage: `url(${backGroundImg})`
     }}>
 

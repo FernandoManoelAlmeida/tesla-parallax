@@ -2,7 +2,7 @@ import React from "react";
 import './Header.css'
 import TeslaLogo from "../assets/teslaLogoSmall.svg"
 
-function Header() {
+function Header({ items }) {
   return (
     <div className="header">
       <div className="header__logo">
@@ -10,12 +10,11 @@ function Header() {
       </div>
 
       <div className="header__center">
-        <p>Model S</p>
-        <p>Model 3</p>
-        <p>Model X</p>
-        <p>Model Y</p>
-        <p>Solar Roof</p>
-        <p>Solar Panel</p>
+        {items.map((item) => (
+          <p>
+            <a href={`#${item.id}`}>{item.title}</a>
+          </p>
+        ))}
       </div>
 
       <div className="header__right">

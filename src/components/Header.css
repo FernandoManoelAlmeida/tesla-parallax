@@ -32,6 +32,11 @@
   text-transform: uppercase;
 }
 
+.header__center > p > a {
+  text-decoration: none;
+  color: initial;
+}
+
 .header__right {
   display: flex;
   justify-content: flex-end;

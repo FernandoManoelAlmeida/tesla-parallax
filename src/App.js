@@ -12,6 +12,7 @@ import SolarRoof from './assets/Desktop-SolarRoof.jpeg';
 
 const items = [
   {
+    id: "modelS",
     title: "Model S",
     desc: "Order Online for Touchless Delivery",
     desclick: "",
@@ -24,6 +25,7 @@ const items = [
     first: true
   },
   {
+    id: "modelY",
     title: "Model Y",
     desc: "Order Online for Touchless Delivery",
     backGroundImg: ModelY,
@@ -32,6 +34,7 @@ const items = [
     twoButtons: true
   },
   {
+    id: "model3",
     title: "Model 3",
     desc: "Order Online for Touchless Delivery",
     backGroundImg: Model3,
@@ -40,6 +43,7 @@ const items = [
     twoButtons: true
   },
   {
+    id: "modelX",
     title: "Model X",
     desc: "Order Online for Touchless Delivery",
     backGroundImg: ModelX,
@@ -48,6 +52,7 @@ const items = [
     twoButtons: true
   },
   {
+    id: "solarPanels",
     title: "Solar Panels",
     desc: "lowest Cost Solar Panels in America",
     backGroundImg: SolarPanels,
@@ -56,6 +61,7 @@ const items = [
     twoButtons: true
   },
   {
+    id: "solarRoof",
     title: "Solar Roof",
     desc: "Produce Clean Energy From Your Roof",
     backGroundImg: SolarRoof,
@@ -64,6 +70,7 @@ const items = [
     twoButtons: true
   },
   {
+    id: "accessories",
     title: "Accessories",
     backGroundImg: Accessories,
     leftBtnText: "Shop Now",
@@ -71,11 +78,9 @@ const items = [
 ]
 
 function App() {
-  console.log(items);
-
   return (
     <div className="App">
-      <Header />
+      <Header items={items} />
       <div className='app__itemsContainer'>
         {items.map((item) => (
           <Item {...item} />
