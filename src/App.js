@@ -10,88 +10,76 @@ import ModelY from './assets/Desktop-ModelY.jpeg';
 import SolarPanels from './assets/Desktop-SolarPanels.jpeg';
 import SolarRoof from './assets/Desktop-SolarRoof.jpeg';
 
+const items = [
+  {
+    title: "Model S",
+    desc: "Order Online for Touchless Delivery",
+    desclick: "",
+    backGroundImg: ModelS,
+    leftBtnText: "Custom Order",
+    leftBtnLink: "",
+    rightBtnText: "Existing Inventory",
+    rightBtnLink: "",
+    twoButtons: true,
+    first: true
+  },
+  {
+    title: "Model Y",
+    desc: "Order Online for Touchless Delivery",
+    backGroundImg: ModelY,
+    leftBtnText: "Custom Order",
+    rightBtnText: "Existing Inventory",
+    twoButtons: true
+  },
+  {
+    title: "Model 3",
+    desc: "Order Online for Touchless Delivery",
+    backGroundImg: Model3,
+    leftBtnText: "Custom Order",
+    rightBtnText: "Existing Inventory",
+    twoButtons: true
+  },
+  {
+    title: "Model X",
+    desc: "Order Online for Touchless Delivery",
+    backGroundImg: ModelX,
+    leftBtnText: "Custom Order",
+    rightBtnText: "Existing Inventory",
+    twoButtons: true
+  },
+  {
+    title: "Solar Panels",
+    desc: "lowest Cost Solar Panels in America",
+    backGroundImg: SolarPanels,
+    leftBtnText: "Order Now",
+    rightBtnText: "Learn More",
+    twoButtons: true
+  },
+  {
+    title: "Solar Roof",
+    desc: "Produce Clean Energy From Your Roof",
+    backGroundImg: SolarRoof,
+    leftBtnText: "Order Now",
+    rightBtnText: "Learn More",
+    twoButtons: true
+  },
+  {
+    title: "Accessories",
+    backGroundImg: Accessories,
+    leftBtnText: "Shop Now",
+  },
+]
+
 function App() {
+  console.log(items);
+
   return (
     <div className="App">
       <Header />
       <div className='app__itemsContainer'>
-        <Item
-          title="Lower Cost Solar Panels in America"
-          desc="Money-back guarantee"
-          desclick=""
-          backGroundImg={ModelS}
-          leftBtnText="ORDER NOW"
-          leftBtnLink=""
-          rightBtnText="LEARN MORE"
-          rightBtnLink=""
-          twoButtons
-          first
-        />
-        <Item
-          title="Lower Cost Solar Panels in America"
-          desc="Money-back guarantee"
-          desclick=""
-          backGroundImg={ModelY}
-          leftBtnText="ORDER NOW"
-          leftBtnLink=""
-          rightBtnText="LEARN MORE"
-          rightBtnLink=""
-          twoButtons
-        />
-        <Item
-          title="Lower Cost Solar Panels in America"
-          desc="Money-back guarantee"
-          desclick=""
-          backGroundImg={Model3}
-          leftBtnText="ORDER NOW"
-          leftBtnLink=""
-          rightBtnText="LEARN MORE"
-          rightBtnLink=""
-          twoButtons
-        />
-        <Item
-          title="Lower Cost Solar Panels in America"
-          desc="Money-back guarantee"
-          desclick=""
-          backGroundImg={ModelX}
-          leftBtnText="ORDER NOW"
-          leftBtnLink=""
-          rightBtnText="LEARN MORE"
-          rightBtnLink=""
-          twoButtons
-        />
-        <Item
-          title="Lower Cost Solar Panels in America"
-          desc="Money-back guarantee"
-          desclick=""
-          backGroundImg={SolarPanels}
-          leftBtnText="ORDER NOW"
-          leftBtnLink=""
-          rightBtnText="LEARN MORE"
-          rightBtnLink=""
-          twoButtons
-        />
-        <Item
-          title="Lower Cost Solar Panels in America"
-          desc="Money-back guarantee"
-          desclick=""
-          backGroundImg={SolarRoof}
-          leftBtnText="ORDER NOW"
-          leftBtnLink=""
-          rightBtnText="LEARN MORE"
-          rightBtnLink=""
-          twoButtons
-        />
-        <Item
-          title="Lower Cost Solar Panels in America"
-          desc="Money-back guarantee"
-          desclick=""
-          backGroundImg={Accessories}
-          leftBtnText="ORDER NOW"
-          leftBtnLink=""
-          rightBtnText="LEARN MORE"
-          rightBtnLink=""
-        />
+        {items.map((item) => (
+          <Item {...item} />
+        ))}
       </div>
     </div>
   );

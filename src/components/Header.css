@@ -3,9 +3,9 @@
   background-color: transparent;
   background: none;
   position: fixed;
-  width: calc(100vw - 30px);
+  width: calc(100vw - 64px);
   top: 0;
-  margin: 15px;
+  margin: 15px 32px;
   margin-top: 15px;
   z-index: 100;
 }
@@ -14,6 +14,11 @@
   height: 24px;
   width: 100px;
   margin-top: 7px;
+}
+
+.header__logo > img {
+  width: 130px;
+  height: 16px;
 }
 
 .header__center {

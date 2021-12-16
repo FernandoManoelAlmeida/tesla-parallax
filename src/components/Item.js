@@ -23,9 +23,9 @@ function Item({
 
       <div className="item__container">
         <div className="item__text">
-          <p>{title}</p>
-          <div className="item++textDesc">
-            <p>{desc}</p>
+          <h1>{title}</h1>
+          <div className="item__textDesc">
+            <h2>{desc}</h2>
           </div>
         </div>
 
@@ -37,11 +37,12 @@ function Item({
             )} 
           </div>
 
-          {first && (
-            <div className="item__expand">
+
+          <div className="item__expand">
+            {first && (
               <ExpandMoreIcon fontSize="large" />
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
 
