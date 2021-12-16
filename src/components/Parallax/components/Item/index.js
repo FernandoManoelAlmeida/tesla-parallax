@@ -1,6 +1,14 @@
 import React from "react";
-import Button from "./Button";
-import './Item.css';
+import Button from "../Button";
+import {
+  ItemContainer,
+  ItemContent,
+  ItemText,
+  ItemTexDesc,
+  ItemLowerThird,
+  ItemButtons,
+  ItemExpand
+} from "./styles";
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 
@@ -18,36 +26,32 @@ function Item({
   first
 }) {
   return (
-    <div id={id} className="item" style={{
-      backgroundImage: `url(${backGroundImg})`
-    }}>
-
-      <div className="item__container">
-        <div className="item__text">
+    <ItemContainer id={id} backgroundImage={backGroundImg}>
+      <ItemContent>
+        <ItemText>
           <h1>{title}</h1>
-          <div className="item__textDesc">
+          <ItemTexDesc>
             <h2>{desc}</h2>
-          </div>
-        </div>
+          </ItemTexDesc>
+        </ItemText>
 
-        <div className="item__lowerThird">
-          <div className="item__buttons">
+        <ItemLowerThird>
+          <ItemButtons>
             <Button imp='primary' text={leftBtnText} link={leftBtnLink} />
             {twoButtons && (
               <Button imp='secondary' text={rightBtnText} link={rightBtnLink} />
             )} 
-          </div>
+          </ItemButtons>
 
 
-          <div className="item__expand">
+          <ItemExpand>
             {first && (
               <ExpandMoreIcon fontSize="large" />
             )}
-          </div>
-        </div>
-      </div>
-
-    </div>
+          </ItemExpand>
+        </ItemLowerThird>
+      </ItemContent>
+    </ItemContainer>
   )
 }
 

@@ -1,29 +1,29 @@
 import React from "react";
-import './Header.css'
-import TeslaLogo from "../assets/teslaLogoSmall.svg"
+import { HeaderContainer, HeaderLogo, HeaderCenter, HeaderRight } from "./styles";
+import TeslaLogo from "../../assets/teslaLogoSmall.svg"
 
 function Header({ items }) {
   return (
-    <div className="header">
+    <HeaderContainer>
       <a href="/">
-        <div className="header__logo">
+        <HeaderLogo>
           <img src={TeslaLogo} alt="" />
-        </div>
+        </HeaderLogo>
       </a>
 
-      <div className="header__center">
+      <HeaderCenter>
         {items.map((item) => (
           <p>
             <a href={`#${item.id}`}>{item.title}</a>
           </p>
         ))}
-      </div>
+      </HeaderCenter>
 
-      <div className="header__right">
+      <HeaderRight>
         <p>Shop</p>
         <p>Tesla Account</p>
-      </div>
-    </div>
+      </HeaderRight>
+    </HeaderContainer>
   )
 }
 

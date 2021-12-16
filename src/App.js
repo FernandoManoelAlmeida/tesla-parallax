@@ -1,6 +1,5 @@
-import './App.css';
 import Header from './components/Header';
-import Item from './components/Item';
+import Parallax from './components/Parallax';
 
 import Accessories from './assets/Desktop-Accessories.jpg';
 import ModelS from './assets/Desktop-ModelS.jpeg';
@@ -79,14 +78,10 @@ const items = [
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Header items={items} />
-      <div className='app__itemsContainer'>
-        {items.map((item) => (
-          <Item {...item} />
-        ))}
-      </div>
-    </div>
+      <Parallax items={items} />
+    </>
   );
 }
 
