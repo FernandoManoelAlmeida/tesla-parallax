@@ -66,17 +66,3 @@ export const ItemExpand = styled.div`
     font-size: 50px;
   }
 `;
-
-// @media screen and (max-device-width: 480px) and (orientation: portrait) {
-//   .item__buttons {
-//     flex-direction: column;
-//   }
-// }
-
-// /* For Mobile Landscape View */
-// @media screen and (max-device-width: 640px) and (orientation: landscape) {
-// }
-
-// /* For Mobile Phones Portrait or Landscape View */
-// @media screen and (max-device-width: 640px) {
-// }
