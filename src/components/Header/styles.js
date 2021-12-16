@@ -35,6 +35,14 @@ export const HeaderCenter = styled.div`
       color: initial;
     }
   }
+
+  @media (max-width: 1023px) and (orientation: portrait) {
+    display: none;
+  }
+
+  @media (max-width: 1023px) and (orientation: landscape) {
+    display: none;
+  }
 `;
 
 export const HeaderRight = styled.div`
@@ -43,5 +51,13 @@ export const HeaderRight = styled.div`
   text-transform: uppercase;
   p {
     margin: 10px;
+  }
+
+  @media (orientation: portrait) {
+    display: none;
+  }
+
+  @media (max-width: 1024px) and (orientation: landscape) {
+    display: none;
   }
 `;

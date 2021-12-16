@@ -23,6 +23,8 @@ export const ItemContent = styled.div`
 
 export const ItemText = styled.div`
   margin-top: 20%;
+  margin-left: 10px;
+  margin-right: 10px;
   display: flex;
   flex-direction: column;
   font-size: 34px;
@@ -37,6 +39,7 @@ export const ItemText = styled.div`
 export const ItemTexDesc = styled.div`
   font-weight: 200;
   font-size: 14px;
+  text-align: center;
 `;
 
 export const ItemLowerThird = styled.div`
@@ -47,6 +50,9 @@ export const ItemLowerThird = styled.div`
 
 export const ItemButtons = styled.div`
   display: flex;
+  @media (orientation: portrait) {
+    flex-direction: column;
+  }
 `;
 
 export const ItemExpand = styled.div`
