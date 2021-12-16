@@ -39,7 +39,7 @@ function Item({
 
           {first && (
             <div className="item__expand">
-              <ExpandMoreIcon />
+              <ExpandMoreIcon fontSize="large" />
             </div>
           )}
         </div>
